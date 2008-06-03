@@ -8,6 +8,9 @@ URL:		http://www.opensync.org
 Source0:	http://www.opensync.org/download/releases/%{version}/%{name}-%{version}.tar.bz2
 # Oh look, again. - AdamW 2008/06
 Patch0:		libopensync-plugin-synce-0.22-warning.patch
+# Better plugin description to differentiate from the other plugin
+# that handles newer devices - AdamW 2008/06
+Patch1:		libopensync-plugin-synce-0.22-description.patch
 BuildRequires:	libopensync-devel < 0.30
 BuildRequires:	librra-devel
 BuildRequires:	libsynce-devel
@@ -23,6 +26,7 @@ synce-opensync-plugin package.
 %prep
 %setup -q
 %patch0 -p1 -b .warning
+%patch1 -p1 -b .description
 autoreconf -sfi
 
 %build
