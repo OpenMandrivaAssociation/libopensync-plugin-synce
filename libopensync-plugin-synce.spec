@@ -1,16 +1,13 @@
+%define srcname libopensync-plugin-synce-rra
+
 Name: 	 	libopensync-plugin-synce
-Version: 	0.22
-Release: 	%{mkrel 2}
+Version: 	0.22.1
+Release: 	%{mkrel 1}
 Summary: 	Windows Mobile 2003 and earlier plugin for OpenSync
 License:	LGPLv2+
 Group:		Office
 URL:		http://www.opensync.org
-Source0:	http://www.opensync.org/download/releases/%{version}/%{name}-%{version}.tar.bz2
-# Oh look, again. - AdamW 2008/06
-Patch0:		libopensync-plugin-synce-0.22-warning.patch
-# Better plugin description to differentiate from the other plugin
-# that handles newer devices - AdamW 2008/06
-Patch1:		libopensync-plugin-synce-0.22-description.patch
+Source0:	http://sourceforge.net/projects/synce/files/SynCE/%{srcname}-%{version}.tar.gz
 # Set a nonsense file sync location by default. If the file sync
 # location exists, the plugin seems to try and sync files even when
 # this doesn't make any sense, like when syncing with Evolution, which
@@ -31,9 +28,7 @@ framework. For devices based on Windows Mobile 5 and later, use the
 synce-opensync-plugin package.
 
 %prep
-%setup -q
-%patch0 -p1 -b .warning
-%patch1 -p1 -b .description
+%setup -q -n %{srcname}-%{version}
 %patch2 -p1 -b .file
 autoreconf -sfi
 
