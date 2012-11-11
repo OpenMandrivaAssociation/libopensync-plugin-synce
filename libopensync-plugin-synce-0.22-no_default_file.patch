@@ -1,0 +1,9 @@
+--- libopensync-plugin-synce-0.22/src/synce-plugin	2007-03-27 05:14:24.000000000 -0700
++++ libopensync-plugin-synce-0.22/src/synce-plugin.new	2008-06-04 00:13:04.000000000 -0700
+@@ -2,5 +2,5 @@
+ 	<contact></contact>
+ 	<todos></todos>
+ 	<calendar></calendar>
+-	<file>/My Documents/</file>
++	<file>/IntentionallyNonExistentDirectory/</file>
+ </config>
