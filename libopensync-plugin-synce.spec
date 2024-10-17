@@ -6,7 +6,7 @@ Release: 	%{mkrel 1}
 Summary: 	Windows Mobile 2003 and earlier plugin for OpenSync
 License:	LGPLv2+
 Group:		Office
-URL:		http://www.opensync.org
+URL:		https://www.opensync.org
 Source0:	http://sourceforge.net/projects/synce/files/SynCE/%{srcname}-%{version}.tar.gz
 # Set a nonsense file sync location by default. If the file sync
 # location exists, the plugin seems to try and sync files even when
